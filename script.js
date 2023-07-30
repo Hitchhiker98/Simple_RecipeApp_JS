@@ -8,7 +8,7 @@ let meals = document.getElementById("meals");
 const list = document.querySelector(".fav-meals")
 
 list.addEventListener("click", (e) => {
-    meals.innerHTML = ""
+    // meals.innerHTML = ""
     getRandomMeal();
 })
 
@@ -40,7 +40,8 @@ async function getRandomMeal() {
 function addMeal(mealData, random = false) {
     const meal = document.createElement('div');
     meal.classList.add("meal");
-
+    
+    meals.innerHTML = ""
     meal.innerHTML = `
     
         <div class="meal-header">
